@@ -1,0 +1,47 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My App</title>
+    <link href="css/kendo.mobile.all.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div data-role="view" id="view1" data-layout="default">Hello Mobile World!</div>
+    <div data-role="view" id="view2" data-layout="default">ABC</div>
+
+    <section data-role="layout" data-id="default">
+        <header data-role="header">
+            <div data-role="navbar">My App
+				<a id="back-button" class="nav-button" data-align="left" data-role="backbutton">Back</a>
+            </div>
+        </header>
+
+        <!--View content will render here-->
+
+        <footer data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#view1">Home</a>
+                <a href="about.html">About</a>      
+                <a href="#view2">More</a>      
+            </div> 
+        </footer>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.mobile.min.js"></script>
+
+	<!-- Initialize the mobile application -->
+	<script>
+	    // var app = new kendo.mobile.Application();
+	    var app = new kendo.mobile.Application(document.body, 
+	    {
+	        transition:'slide'
+	        // platform:'android'
+	    });	    
+	</script>
+
+</body>
+</html>
+
